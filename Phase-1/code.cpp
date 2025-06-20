@@ -254,15 +254,16 @@ public:
             string offset;
             ss >> rd >> offset;
             if(offset[0] == '0' && offset[1] == 'x'){
-            offset = offset.substr(2);
-            long long immediate = stoll(offset, nullptr, 16);
+                offset = offset.substr(2);
+                long long immediate = stoll(offset, nullptr, 16);
+                rd.pop_back();
+                return generateUType(instr, rd, immediate);
             }
-            else{
-                immediate = stoll(offset);
+            else {
+                immediate = stoll(offset, nullptr, 10); // Explicitly use base 10
+                rd.pop_back();
+                return generateUType(instr, rd, immediate);
             }
-            rd.pop_back();
-            immediate &= 0xFFFFF;
-            return generateUType(instr, rd, immediate);
         } 
         else if (instr.type == "UJ") {
             string label;
