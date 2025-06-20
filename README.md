@@ -29,13 +29,13 @@ This project is a two-phase C++ implementation of a **RISC-V toolchain**:
 
 ### For Assembler (Phase 1)
 ```bash
-g++ phase1.cpp -o assembler
+g++ code.cpp -o assembler
 ./assembler input.asm
 ```
 
 ### For Simulator (Phase 2)
 ```bash
-g++ phase2.cpp -o simulator
+g++ code.cpp -o simulator
 ./simulator
 ```
 
