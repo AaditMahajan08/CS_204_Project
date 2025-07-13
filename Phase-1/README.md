@@ -18,7 +18,7 @@ The **Phase-I** of RISC-V ASSEMBLER is a C++ program designed to convert RISC-V 
 - [Assembler Directives](#assembler-directives)
 - [Label definition rule](#label-definition-rule)
 
-## Installation and Compiation
+## Installation and Compilation
 
 ### Compiling the code
 To compile the source code, use the following command in your terminal:
